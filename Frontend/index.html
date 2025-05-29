@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Course Recommender</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Course Recommender</h1>
+
+    <form id="courseForm">
+      <label for="field">Field of Interest:</label>
+      <select id="field" name="field" required>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Arts">Arts</option>
+        <option value="Business">Business</option>
+        <option value="Engineering">Engineering</option>
+      </select>
+
+      <label for="difficulty">How challenging do you want your courses to be?</label>
+      <select id="difficulty" name="difficulty" required>
+        <option value="light">Light (easy-going)</option>
+        <option value="moderate">Moderate</option>
+        <option value="tough">Tough (ready for challenge)</option>
+      </select>
+
+
+      <label for="time">Available Study Time (hours/day):</label>
+      <input type="number" id="time" name="time" min="1" max="10" required>
+
+      <button type="submit">Recommend Courses</button>
+    </form>
+
+    <div id="resultSection" style="display:none;">
+      <h2>Recommended Courses</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course Code</th>
+            <th>Name</th>
+            <th>Difficulty</th>
+            <th>Suitability</th>
+            <th>Credits</th>
+          </tr>
+        </thead>
+        <tbody id="courseTableBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
